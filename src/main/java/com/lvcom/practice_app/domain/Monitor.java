@@ -23,10 +23,10 @@ public class Monitor {
     @Column(nullable = false)
     private LocalDate date;
 
-    @Column(nullable = false)
+    @Column(nullable = false,columnDefinition = "varchar(60)")
     private String createdBy;
 
-    @Column(nullable = false)
+    @Column(columnDefinition = "varchar(60)")
     private String updatedBy;
 
     @UpdateTimestamp
@@ -47,8 +47,5 @@ public class Monitor {
     @ManyToOne(optional = false)
     private Workingplace workingplace;
 
-    public Monitor(String createdBy, Workingplace workingplace) {
-        this.createdBy = createdBy;
-        this.workingplace = workingplace;
-    }
+
 }

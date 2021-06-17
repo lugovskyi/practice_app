@@ -21,12 +21,12 @@ public class Pc {
     @CreatedDate
     @Column(nullable = false)
     private LocalDate createdAt;
-    @Column(nullable = false, columnDefinition = "varchar(255)")
+    @Column(nullable = false, columnDefinition = "varchar(60)")
     private String createdBy;
 
     @UpdateTimestamp
     private LocalDate updatedAt;
-    @Column(nullable = false, columnDefinition = "varchar(255)")
+    @Column(columnDefinition = "varchar(60)")
     private String updatedBy;
 
     @Column(nullable = false)
