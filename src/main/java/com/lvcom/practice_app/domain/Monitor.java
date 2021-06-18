@@ -21,7 +21,7 @@ public class Monitor {
 
     @CreatedDate
     @Column(nullable = false)
-    private LocalDate date;
+    private LocalDate createdAt;
 
     @Column(nullable = false,columnDefinition = "varchar(60)")
     private String createdBy;

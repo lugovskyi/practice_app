@@ -25,7 +25,7 @@ public class Workingplace {
     @Column(nullable = false)
     private LocalDate createdAt;
 
-    @Column(columnDefinition = "varchar(255)")
+    @Column(nullable = false, columnDefinition = "varchar(60)")
     private String createdBy;
 
     @UpdateTimestamp
@@ -34,10 +34,10 @@ public class Workingplace {
     @Column(columnDefinition = "varchar(60)")
     private String updatedBy;
 
-    @Column(columnDefinition = "varchar(60)")
+    @Column(nullable = false, columnDefinition = "varchar(60)")
     private String name;
 
-    @Column(columnDefinition = "varchar(60)")
+    @Column(nullable = false, columnDefinition = "varchar(60)")
     private String city;
 
     @OneToMany(mappedBy = "workingplace")
