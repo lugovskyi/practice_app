@@ -17,19 +17,39 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DBRider
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@DataSet({"monitor.yml", "pc.yml", "workingplace.yml"})
+@DataSet({"workingplace.yml", "pc.yml", "monitor.yml"})
+
 public class MonitorRepositoryTest {
     @Autowired
     private MonitorRepository repo;
 
     @Test
-    void findAllByLength() {
-        final int length = 50;
-        final List<Monitor> monitors = repo.findMonitorByLength(length);
+    void findAllByHeight_Exists5ItemsWith5Height() {
+        final Integer height = 5;
+        final List<Monitor> monitors = repo.findAllByHeight(height);
         assertThat(monitors)
                 .isNotNull()
                 .isNotEmpty()
-                .allMatch(monitor -> monitor.getLength() == length);
+                .allMatch(monitor -> height.equals(monitor.getHeight()));
 
+    }
+    @Test
+    void findAllByWidth_Exists5ItemsWith5Width_True() {
+        final Integer width = 5;
+        final List<Monitor> monitors = repo.findAllByWidth(width);
+        assertThat(monitors)
+                .isNotNull()
+                .hasSizeGreaterThanOrEqualTo(5)
+                .allMatch(monitor -> width.equals(monitor.getWidth()));
+
+    }
+    @Test
+    void findAllByLength_Exists4ItemsWith50Length_True() {
+        final Integer length = 50;
+        final List<Monitor> monitors = repo.findAllByLength(length);
+        assertThat(monitors)
+                .isNotNull()
+                .hasSizeGreaterThanOrEqualTo(4)
+                .allMatch(monitor -> length.equals(monitor.getLength()));
     }
 }
