@@ -17,7 +17,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DataSet({"workingplace.yml", "pc.yml", "monitor.yml"})
-
 public class PcRepositoryTest {
     @Autowired
     private PcRepository repo;
@@ -32,6 +31,7 @@ public class PcRepositoryTest {
                 .allMatch(pc -> cpuCount.equals(pc.getCpuCount()) );
 
     }
+
     @Test
     void findAllByRamSize_Exists1ItemWith16RamSize_True() {
         final Integer ramSize = 16;
@@ -42,6 +42,7 @@ public class PcRepositoryTest {
                 .allMatch(pc -> ramSize.equals(pc.getRamSize()) );
 
     }
+
     @Test
     void findAllByCreatedBy_Exists4ItemsWithAuthorCreatedBy_True() {
         final String createdBy = "author";

@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 import lombok.*;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -46,6 +47,4 @@ public class Monitor {
 
     @ManyToOne(optional = false)
     private Workingplace workingplace;
-
-
 }

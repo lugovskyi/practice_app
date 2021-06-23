@@ -13,12 +13,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
 @DBRider
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DataSet({"workingplace.yml", "pc.yml", "monitor.yml"})
-
 public class MonitorRepositoryTest {
     @Autowired
     private MonitorRepository repo;
@@ -33,6 +31,7 @@ public class MonitorRepositoryTest {
                 .allMatch(monitor -> height.equals(monitor.getHeight()));
 
     }
+
     @Test
     void findAllByWidth_Exists5ItemsWith5Width_True() {
         final Integer width = 5;
@@ -43,6 +42,7 @@ public class MonitorRepositoryTest {
                 .allMatch(monitor -> width.equals(monitor.getWidth()));
 
     }
+
     @Test
     void findAllByLength_Exists4ItemsWith50Length_True() {
         final Integer length = 50;

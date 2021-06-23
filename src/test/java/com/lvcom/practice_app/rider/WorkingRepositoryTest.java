@@ -8,15 +8,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
 @DBRider
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DataSet({"workingplace.yml", "pc.yml", "monitor.yml"})
-
 public class WorkingRepositoryTest {
     @Autowired
     private WorkingPlaceRepository repo;
@@ -30,7 +29,6 @@ public class WorkingRepositoryTest {
                 .hasSizeGreaterThanOrEqualTo(4)
                 .allMatch(workingplace -> workingplace.getName().equals(name));
     }
-
 
     @Test
     void findAllByCity_Exists2ItemsWithChernihivCity_True() {

@@ -1,6 +1,5 @@
 package com.lvcom.practice_app.domain;
 
-import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
@@ -8,6 +7,8 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+
+import lombok.*;
 
 @Getter
 @Setter
@@ -45,5 +46,4 @@ public class Workingplace {
 
     @OneToOne(mappedBy = "workingplace")
     private Pc pc;
-
 }
