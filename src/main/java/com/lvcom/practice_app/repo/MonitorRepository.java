@@ -12,4 +12,8 @@ public interface MonitorRepository extends CrudRepository<Monitor,Long> {
      List<Monitor> findAllByWidth(int width);
 
      List<Monitor> findAllByLength(Integer length);
+
+     List<Monitor> findAllByCreatedBy(String createdBy);
+
+     List<Monitor> findAllByDisplaySize(Integer displaySize);
 }

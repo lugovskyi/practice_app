@@ -11,4 +11,10 @@ public interface PcRepository extends CrudRepository<Pc,Long> {
     List<Pc> findAllByRamSize(Integer ramSize);
 
     List<Pc> findAllByCreatedBy(String createdBy);
+
+    List<Pc> findAllByWidth(Integer width);
+
+    List<Pc> findAllByHeigth(Integer height);
+
+    List<Pc> findAllByLength(Integer length);
 }

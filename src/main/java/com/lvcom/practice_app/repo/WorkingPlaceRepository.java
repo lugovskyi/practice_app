@@ -10,6 +10,8 @@ public interface WorkingPlaceRepository extends CrudRepository<Workingplace,Long
     List<Workingplace> findAllByName(String name);
 
     List<Workingplace> findAllByCity(String city);
+
+    List<Workingplace> findAllByCreatedBy(String createdBy);
 }
 
 
