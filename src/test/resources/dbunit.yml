@@ -1,0 +1,4 @@
+caseInsensitiveStrategy: !!com.github.database.rider.core.api.configuration.Orthography 'LOWERCASE'
+properties:
+  caseSensitiveTableNames: false
+  schema: 'public'

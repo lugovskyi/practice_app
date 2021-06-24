@@ -1,0 +1,51 @@
+monitor:
+  - id: 1
+    created_by: "author1"
+    created_at: "2020-04-04"
+    display_size: 25
+    height: 5
+    length: 50
+    updated_at:
+    updated_by: "author2"
+    width: 5
+    workingplace_id: 1
+  - id: 2
+    created_by: "author1"
+    created_at: "2020-04-04"
+    display_size: 5
+    height: 5
+    length: 50
+    updated_at:
+    updated_by: "author2"
+    width: 5
+    workingplace_id: 1
+  - id: 3
+    created_by: "author1"
+    created_at: "2020-04-04"
+    display_size: 5
+    height: 5
+    length: 50
+    updated_at:
+    updated_by: "author3"
+    width: 5
+    workingplace_id: 1
+  - id: 4
+    created_by: "author5"
+    created_at: "2020-04-04"
+    display_size: 5
+    height: 5
+    length: 45
+    updated_at:
+    updated_by: "author2"
+    width: 5
+    workingplace_id: 1
+  - id: 5
+    created_by: "author3"
+    created_at: "2020-04-04"
+    display_size: 5
+    height: 5
+    length: 50
+    updated_at:
+    updated_by: "author"
+    width: 5
+    workingplace_id: 1
